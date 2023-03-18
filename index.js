@@ -131,3 +131,18 @@ const highestDigit = (number) => {
   number = number.toString();
   return Math.max(...number);
 };
+
+// Someone has attempted to censor strings by replacing every vowel with a *, l*k* th*s
+// Create a function "uncensor" that returns the original uncensored string, given a censored string and a string of the censored vowels
+
+const uncensor = (str, vowels) => {
+  const arr = vowels.split("");
+  return str.replace(/\*/g, () => arr.shift());
+};
+
+function uncensor(str, vowels) {
+  for (let i = 0; i < vowels.length; i++) {
+    str = str.replace("*", vowels(i));
+  }
+  return str;
+}
