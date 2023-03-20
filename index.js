@@ -159,3 +159,17 @@ function isSuperior(arr1, arr2) {
 // Alternate solution
 
 const isSuperior = (arr1, arr2) => arr1 > arr2;
+
+// Create a function "product" that takes one, two or more numbers as arguments and adds them together to get a new number. The function then repeteadly multiplies the digits of the new number by each other , yielding a new number, until the product is only 1 digit long. Return the final product. The input of the function should be at least one number.
+
+function product(...args) {
+  const prodDigs = (digs) => {
+    return digs.reduce((accum, val) => accum * val, 1);
+  };
+
+  let sum = args.reduce((accum, val) => accum + val, 0);
+  while (sum.toString().length > 1) {
+    sum = prodDigs(sum.toString().split(""));
+  }
+  return sum;
+}
