@@ -173,3 +173,14 @@ function product(...args) {
   }
   return sum;
 }
+
+// a vehicle needs 10 times the amount of fuel than the distance it travels. However, it must always carry a minimum of 100 fuel before setting off.
+// Create a function "fuel" that calculates the amount of fuel the car needs based on the distance
+
+function fuel(n) {
+  return n > 10 ? n * 10 : 100;
+}
+
+// Alternate solution
+
+const fuel = (n) => Math.max(100, n * 10);
