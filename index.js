@@ -184,3 +184,9 @@ function fuel(n) {
 // Alternate solution
 
 const fuel = (n) => Math.max(100, n * 10);
+
+// A decimal number can be represented as a sequence of bits. From the bitwise representation of numbers, we can calculate the bitwise AND, bitwise OR and bitwise XOR. Create the functions bitwiseAND(), bitwiseOR(), and bitwiseXOR() to calculate the the bitwise AND, bitwise OR and bitwise XOR of two numbers.
+
+const bitwiseAND = (n1, n2) => n1 & n2;
+const bitwiseOR = (n1, n2) => n1 | n2;
+const bitwiseXOR = (n1, n2) => n1 ^ n2;
