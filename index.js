@@ -190,3 +190,12 @@ const fuel = (n) => Math.max(100, n * 10);
 const bitwiseAND = (n1, n2) => n1 & n2;
 const bitwiseOR = (n1, n2) => n1 | n2;
 const bitwiseXOR = (n1, n2) => n1 ^ n2;
+
+// Given a number, create a function "multiSum" that returns the total sum of that number multiplied by every number between 1 and 10
+
+function multiSum(num, ten = 0) {
+  if (ten == 0) {
+    return 0;
+  }
+  return ten * num + multiSum(num, ten - 1);
+}
