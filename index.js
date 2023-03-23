@@ -199,3 +199,7 @@ function multiSum(num, ten = 0) {
   }
   return ten * num + multiSum(num, ten - 1);
 }
+
+// Alternate solution
+
+const multiSum = (n) => n * 55;
