@@ -209,3 +209,9 @@ const multiSum = (n) => n * 55;
 function derivative(b, m) {
   return b * m ** (b - 1);
 }
+
+// Alternate solution
+
+function derivative(b, m) {
+  return b * Math.pow(m, b - 1);
+}
