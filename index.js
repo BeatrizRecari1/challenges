@@ -247,3 +247,24 @@ const twoSum = function (nums, target) {
   }
   return index;
 };
+
+// Given an integer x, return true if x is a
+// palindrome
+// , and false otherwise.
+
+function isPalindrome(x) {
+  if (x < 0) {
+    return false;
+  }
+
+  let reversed = 0;
+  let remainder;
+  let num = x;
+
+  while (num > 0) {
+    remainder = num % 10;
+    reversed = reversed * 10 + remainder;
+    num = Math.floor(num / 10);
+  }
+  return reversed === x;
+}
