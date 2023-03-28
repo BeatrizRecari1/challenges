@@ -268,3 +268,17 @@ function isPalindrome(x) {
   }
   return reversed === x;
 }
+
+// Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
+// Return the running sum of nums.
+
+const runningSum = function (nums) {
+  let sum = nums[0];
+  for (let i = 0; i < nums.length; i++) {
+    nums[i] = sum;
+    if (i + 1 < nums.length) {
+      sum += nums[i + 1];
+    }
+  }
+  return nums;
+};
