@@ -491,3 +491,33 @@ function maxProfit(prices) {
 
   return maxProfit;
 }
+
+// // Given a string s which consists of lowercase or uppercase letters, return the length of the longest palindrome that can be built with those letters.
+
+// Letters are case sensitive, for example, "Aa" is not considered a palindrome here.
+
+function longestPalindrome(s) {
+  if (!s || s.length === 0) {
+    return 0;
+  }
+
+  let freq = new Map();
+  let length = 0;
+  let hasOdd = false;
+
+  for (let i = 0; i < s.length; i++) {
+    let char = s.charAt(i);
+    freq.set(char, (freq.get(char) || 0) + 1);
+  }
+
+  for (let count of freq.values()) {
+    if (count % 2 === 0) {
+      length += count;
+    } else {
+      length += count - 1;
+      hasOdd = true;
+    }
+  }
+
+  return hasOdd ? length + 1 : length;
+}
