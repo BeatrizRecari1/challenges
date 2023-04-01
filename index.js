@@ -521,3 +521,21 @@ function longestPalindrome(s) {
 
   return hasOdd ? length + 1 : length;
 }
+
+// Given the root of an n-ary tree, return the preorder traversal of its nodes' values.
+
+// Nary-Tree input serialization is represented in their level order traversal. Each group of children is separated by the null value (See examples)
+
+function preorder(root) {
+  if (!root) {
+    return [];
+  }
+
+  let result = [root.val];
+
+  for (let child of root.children) {
+    result = result.concat(preorder(child));
+  }
+
+  return result;
+}
