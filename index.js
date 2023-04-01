@@ -539,3 +539,36 @@ function preorder(root) {
 
   return result;
 }
+
+// Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
+
+function levelOrder(root) {
+  if (!root) {
+    return [];
+  }
+
+  let result = [];
+  let queue = [root];
+
+  while (queue.length > 0) {
+    let level = [];
+    let levelSize = queue.length;
+
+    for (let i = 0; i < levelSize; i++) {
+      let node = queue.shift();
+      level.push(node.val);
+
+      if (node.left) {
+        queue.push(node.left);
+      }
+
+      if (node.right) {
+        queue.push(node.right);
+      }
+    }
+
+    result.push(level);
+  }
+
+  return result;
+}
