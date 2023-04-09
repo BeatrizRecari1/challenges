@@ -783,3 +783,41 @@ function minCostClimbingStairs(cost) {
 
   return Math.min(dp[n - 1], dp[n - 2]);
 }
+
+// Given two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.
+
+// An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+function findAnagrams(s, p) {
+  const result = [];
+  const pCount = new Array(26).fill(0);
+  const sCount = new Array(26).fill(0);
+
+  // Calculate the frequency of each character in p
+  for (let i = 0; i < p.length; i++) {
+    pCount[p.charCodeAt(i) - 97]++;
+  }
+
+  // Slide a window of size p.length over s and check if each substring is an anagram of p
+  for (let i = 0; i < s.length; i++) {
+    sCount[s.charCodeAt(i) - 97]++;
+    if (i >= p.length) {
+      sCount[s.charCodeAt(i - p.length) - 97]--;
+    }
+    if (i >= p.length - 1 && compareArrays(pCount, sCount)) {
+      result.push(i - p.length + 1);
+    }
+  }
+
+  return result;
+}
+
+// Helper function to compare two arrays of integers
+function compareArrays(a, b) {
+  for (let i = 0; i < 26; i++) {
+    if (a[i] !== b[i]) {
+      return false;
+    }
+  }
+  return true;
+}
