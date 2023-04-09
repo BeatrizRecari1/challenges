@@ -821,3 +821,33 @@ function compareArrays(a, b) {
   }
   return true;
 }
+
+// You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.
+
+// Return the length of the longest substring containing the same letter you can get after performing the above operations.
+
+function characterReplacement(s, k) {
+  const count = new Array(26).fill(0);
+  let maxCount = 0;
+  let maxLength = 0;
+  let start = 0;
+
+  // Slide a window over s and keep track of the count of each character in the window
+  for (let end = 0; end < s.length; end++) {
+    const charIndex = s.charCodeAt(end) - 65;
+    count[charIndex]++;
+    maxCount = Math.max(maxCount, count[charIndex]);
+
+    // If the number of characters that need to be changed exceeds k, move the window's start position
+    while (end - start + 1 - maxCount > k) {
+      const startCharIndex = s.charCodeAt(start) - 65;
+      count[startCharIndex]--;
+      start++;
+      maxCount = Math.max(...count);
+    }
+
+    maxLength = Math.max(maxLength, end - start + 1);
+  }
+
+  return maxLength;
+}
