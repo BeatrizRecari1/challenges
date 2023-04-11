@@ -851,3 +851,29 @@ function characterReplacement(s, k) {
 
   return maxLength;
 }
+
+// Write an algorithm to determine if a number n is happy.
+
+// A happy number is a number defined by the following process:
+
+// Starting with any positive integer, replace the number by the sum of the squares of its digits.
+// Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
+// Those numbers for which this process ends in 1 are happy.
+// Return true if n is a happy number, and false if not.
+
+function isHappy(n) {
+  let seen = new Set(); // to keep track of previously seen numbers
+  while (n !== 1 && !seen.has(n)) {
+    // continue until number becomes 1 or we encounter a previously seen number
+    seen.add(n); // add current number to the set of seen numbers
+    let sum = 0;
+    while (n > 0) {
+      // calculate the sum of squares of digits
+      const digit = n % 10;
+      sum += digit * digit;
+      n = Math.floor(n / 10);
+    }
+    n = sum; // set n to the calculated sum
+  }
+  return n === 1; // if n is 1, it's a happy number; otherwise, it's not
+}
