@@ -957,3 +957,14 @@ function newString(n, s) {
 function splitString(string) {
   return string.split(" ");
 }
+
+// Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+function squareNumber(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    const squaredNumber = numbers[i] * numbers[i];
+    sum += squaredNumber;
+  }
+  return sum;
+}
