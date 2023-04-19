@@ -996,3 +996,13 @@ function boolToWord(bool) {
     return "No";
   }
 }
+
+// Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+
+function smashWordsIntoSentence(words) {
+  if (!Array.isArray(words)) {
+    return "Input is not an array.";
+  }
+
+  return words.join(" ");
+}
