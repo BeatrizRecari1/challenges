@@ -1023,3 +1023,10 @@ function cockroachSpeed(s) {
 
   return roundedSpeed;
 }
+
+// Write a function which converts the input string to uppercase.
+
+function convertToUpperCase(str) {
+  const newStr = str.toUpperCase();
+  return newStr;
+}
