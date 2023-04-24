@@ -1030,3 +1030,10 @@ function convertToUpperCase(str) {
   const newStr = str.toUpperCase();
   return newStr;
 }
+
+// Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+function removeExclamationMars(s) {
+  const newArr = s.replace(/!/g, "");
+  return newArr;
+}
