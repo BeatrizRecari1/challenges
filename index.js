@@ -1037,3 +1037,8 @@ function removeExclamationMars(s) {
   const newArr = s.replace(/!/g, "");
   return newArr;
 }
+
+// Write a function greet that returns the string "Hello World!"
+function greet() {
+  return "Hello World!";
+}
