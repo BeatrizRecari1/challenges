@@ -1082,3 +1082,14 @@ const rps = (p1, p2) => {
 function digitize(n) {
   return Array.from(String(n), Number).reverse();
 }
+
+// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+function XO(str) {
+  let sum = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i].toLowerCase() == "x") sum++;
+    if (str[i].toLowerCase() == "o") sum--;
+  }
+  return sum == 0;
+}
