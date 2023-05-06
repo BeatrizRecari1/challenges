@@ -1175,7 +1175,6 @@ function nbYear(p0, percent, aug, p) {
   return years;
 }
 
-
 // Can you find the needle in the haystack?
 
 // Write a function findNeedle() that takes an array full of junk but containing one "needle"
@@ -1183,10 +1182,8 @@ function nbYear(p0, percent, aug, p) {
 // After your function finds the needle it should return a message (as a string) that says:
 
 function findTheNeedle(haystack) {
-  return "found the needle at position " + haystack.indexOf("needle")
+  return "found the needle at position " + haystack.indexOf("needle");
 }
-
-
 
 // Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
 
@@ -1194,16 +1191,47 @@ function findTheNeedle(haystack) {
 
 function sumArray(array) {
   if (array == null || array.length <= 2) {
-      return 0
-    }
-    
-    var max = Math.max.apply(Math, array);
-    var min = Math.min.apply(Math, array);
-    var sum = 0
-    
-    for (i = 0; i < array.length; i++) {
-      sum += array[i];
-     }
-  
-    return sum - max - min
+    return 0;
   }
+
+  var max = Math.max.apply(Math, array);
+  var min = Math.min.apply(Math, array);
+  var sum = 0;
+
+  for (i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+
+  return sum - max - min;
+}
+
+// Given an array of integers.
+
+// Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 0 is neither positive nor negative.
+
+// If the input is an empty array or is null, return an empty array.
+
+function countPositivesSumNegatives(input) {
+  // your code here
+  var newArr = [];
+  var positiveNumber = 0;
+  var negativeNumber = 0;
+
+  // Validate Input
+  if (input === null || input.length === 0) return newArr;
+
+  // Loop through array of Numbers
+  for (var i = 0; i < input.length; i++) {
+    if (input[i] == 0) continue;
+    // Count positives
+    else if (input[i] > 0) positiveNumber++;
+    // Sum negatives
+    else if (input[i] < 0) negativeNumber += input[i];
+  }
+
+  // Prepare Output
+  newArr.push(positiveNumber);
+  newArr.push(negativeNumber);
+
+  return newArr;
+}
