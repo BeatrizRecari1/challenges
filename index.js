@@ -1241,3 +1241,9 @@ function countPositivesSumNegatives(input) {
 function solution(str, ending) {
   return str.endsWith(ending);
 }
+
+// Code as fast as you can, double the integer and return it
+
+function doubleInteger(integer) {
+  return integer * 2;
+}
