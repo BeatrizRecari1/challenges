@@ -1247,3 +1247,9 @@ function solution(str, ending) {
 function doubleInteger(integer) {
   return integer * 2;
 }
+
+// Implement a function which convert the given boolean value into its string representation.
+
+function booleanToString(b) {
+  return b.toString();
+}
