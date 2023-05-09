@@ -1281,6 +1281,6 @@ function arrayWithValue(a, x) {
 
 // Your task is to write a function that takes a string and return a new string with all vowels removed.
 
-function disenvowel(str) {
+function disemvowel(str) {
   return str.replace(/[aeiou]/gi, "");
 }
