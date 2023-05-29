@@ -1390,3 +1390,17 @@ function LetterCapitalize(str) {
 
   return capitalizedStr;
 }
+
+// have the function FirstFactorial(num) take the num parameter passed to it and return the factorial in javascript
+
+function FirstFactorial(num) {
+  if (num === 0 || num === 1) {
+    return 1;
+  } else {
+    let factorial = 1;
+    for (let i = 2; i <= num; i++) {
+      factorial *= i;
+    }
+    return factorial;
+  }
+}
