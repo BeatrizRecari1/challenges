@@ -1372,3 +1372,21 @@ var number = function (array) {
     return index + 1 + ": " + line;
   });
 };
+
+// have the function LetterCapitalize(str) take the str parameter and capitalize the first letter of each word
+
+function LetterCapitalize(str) {
+  // Split the string into an array of words
+  let words = str.split(" ");
+
+  // Iterate over each word in the array
+  for (let i = 0; i < words.length; i++) {
+    // Capitalize the first letter of each word
+    words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+  }
+
+  // Join the modified words back into a single string
+  let capitalizedStr = words.join(" ");
+
+  return capitalizedStr;
+}
