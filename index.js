@@ -1542,3 +1542,19 @@ function VoweCount(str) {
   }
   return sum;
 }
+
+// Have the function SwapCase(str) take the str parameter and swap the case of each character. For example: if str is "Hello World" the output should be hELLO wORLD. Let numbers and symbols stay the way they are.
+
+function SwapCase(str) {
+  let swapped = "";
+
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charAt(i);
+    if (char === char.toLowerCase()) {
+      swapped += char.toUpperCase();
+    } else {
+      swapped += char.toLowerCase();
+    }
+  }
+  return swapped;
+}
