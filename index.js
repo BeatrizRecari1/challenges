@@ -1526,3 +1526,19 @@ function WordCount(str) {
 
   return stringSplit.length;
 }
+
+// Have the function VowelCount(str) take the str string parameter being passed and return the number of vowels the string contains (ie. "All cows eat grass and moo" would return 8). Do not count y as a vowel for this challenge.
+
+function VoweCount(str) {
+  const vowels = ["a", "e", "i", "o", "u"];
+  let sum = 0;
+
+  const strToLowerCase = str.toLowerCase();
+
+  for (let i = 0; i < strToLowerCase.length; i++) {
+    if (vowels.includes(strToLowerCase[i])) {
+      sum++;
+    }
+  }
+  return sum;
+}
