@@ -1558,3 +1558,43 @@ function SwapCase(str) {
   }
   return swapped;
 }
+
+// Have the function FindIntersection(strArr) read the array of strings stored in strArr which will contain 2 elements: the first element will represent a list of comma-separated numbers sorted in ascending order, the second element will represent a second list of comma-separated numbers (also sorted). Your goal is to return a comma-separated string containing the numbers that occur in elements of strArr in sorted order. If there is no intersection, return the string false.
+
+function FindIntersection(strArr) {
+  // Split the two input strings into arrays of numbers
+  const arr1 = strArr[0].split(",");
+  const arr2 = strArr[1].split(",");
+
+  // Initialize an empty array to store the intersection
+  const intersection = [];
+
+  // Initialize two pointers to traverse the arrays
+  let i = 0;
+  let j = 0;
+
+  // Find the intersection of the two arrays
+  while (i < arr1.length && j < arr2.length) {
+    const num1 = parseInt(arr1[i]);
+    const num2 = parseInt(arr2[j]);
+
+    if (num1 === num2) {
+      intersection.push(num1);
+      i++;
+      j++;
+    } else if (num1 < num2) {
+      i++;
+    } else {
+      j++;
+    }
+  }
+
+  // If there is no intersection, return false
+  if (intersection.length === 0) {
+    return "false";
+  }
+
+  // Convert the intersection array to a comma-separated string
+  const result = intersection.join(",");
+  return result;
+}
