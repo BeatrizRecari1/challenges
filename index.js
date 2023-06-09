@@ -1656,3 +1656,44 @@ function timeConvert(num) {
 
   return hours + ":" + minutes;
 }
+
+// Have the function CountingMinutesI(str) take the str parameter being passed which will be two times (each properly formatted with a colon and am or pm) separated by a hyphen and return the total number of minutes between the two times. The time will be in a 12 hour clock format. For example: if str is 9:00am-10:00am then the output should be 60. If str is 1:00pm-11:00am the output should be 1320.
+
+function CountingMinutesI(str) {
+  // code goes here
+  var times = str.split("-");
+  var startTime = times[0];
+  var endTime = times[1];
+
+  // Function to convert a time to minutes in 24-hour format
+  function convertToMinutes(time) {
+    var parts = time.split(":");
+    var hours = parseInt(parts[0]);
+    var minutes = parseInt(parts[1].slice(0, 2));
+    var period = parts[1].slice(2);
+
+    if (period === "pm" && hours !== 12) {
+      hours += 12;
+    } else if (period === "am" && hours === 12) {
+      hours = 0;
+    }
+
+    return hours * 60 + minutes;
+  }
+
+  // Convert start and end times to minutes
+  var startMinutes = convertToMinutes(startTime);
+  var endMinutes = convertToMinutes(endTime);
+
+  // Calculate the total minutes between the times
+  var totalMinutes;
+  if (endMinutes > startMinutes) {
+    totalMinutes = endMinutes - startMinutes;
+  } else if (endMinutes < startMinutes) {
+    totalMinutes = 24 * 60 - startMinutes + endMinutes;
+  } else {
+    totalMinutes = 0;
+  }
+
+  return totalMinutes;
+}
