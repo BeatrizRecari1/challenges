@@ -1697,3 +1697,39 @@ function CountingMinutesI(str) {
 
   return totalMinutes;
 }
+
+// Have the function LetterChanges(str) take the str parameter being passed and modify it using the following algorithm. Replace every letter in the string with the letter following it in the alphabet (ie. c becomes d, z becomes a). Then capitalize every vowel in this new string (a, e, i, o, u) and finally return this modified string.
+
+function LetterChanges(str) {
+  var modifiedStr = "";
+
+  for (var i = 0; i < str.length; i++) {
+    var char = str[i];
+
+    // Check if the character is a letter
+    if (char.match(/[a-z]/i)) {
+      // Convert the letter to the next letter in the alphabet
+      var nextChar = String.fromCharCode(char.charCodeAt(0) + 1);
+
+      // Handle wrapping around from 'z' to 'a'
+      if (nextChar === "{") {
+        nextChar = "a";
+      }
+
+      // Capitalize the vowel letters
+      if (nextChar.match(/[aeiou]/i)) {
+        nextChar = nextChar.toUpperCase();
+      }
+
+      modifiedStr += nextChar;
+    } else {
+      modifiedStr += char;
+    }
+  }
+
+  return modifiedStr;
+}
+
+// Example usage:
+console.log(LetterChanges("hello")); // Output: "Ifmmp"
+console.log(LetterChanges("fun times!")); // Output: "gvO Ujnft!"
