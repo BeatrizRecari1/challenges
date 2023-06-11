@@ -1733,3 +1733,19 @@ function LetterChanges(str) {
 // Example usage:
 console.log(LetterChanges("hello")); // Output: "Ifmmp"
 console.log(LetterChanges("fun times!")); // Output: "gvO Ujnft!"
+
+// Have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first letter of each word. Words will be separated by only one space.
+
+function LetterCapitalize(str) {
+  let words = str.split(" ");
+
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+
+    words[i] = word.charAt(0).toUpperCase() + word.slice(1);
+  }
+
+  const capitalizedStr = words.join(" ");
+
+  return capitalizedStr;
+}
