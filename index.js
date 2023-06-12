@@ -1749,3 +1749,29 @@ function LetterCapitalize(str) {
 
   return capitalizedStr;
 }
+
+// Have the function SimpleSymbols(str) take the str parameter being passed and determine if it is an acceptable sequence by either returning the string true or false. The str parameter will be composed of + and = symbols with several characters between them (ie. ++d+===+c++==a) and for the string to be true each letter must be surrounded by a + symbol. So the string to the left would be false. The string will not be empty and will have at least one letter.
+
+function SimpleSymbols(str) {
+  // Check the first and last characters
+  if (str[0] !== "+" || str[str.length - 1] !== "+") {
+    return "false";
+  }
+
+  // Iterate through each character starting from the second position
+  for (let i = 1; i < str.length - 1; i++) {
+    if (/^[a-zA-Z]$/.test(str[i])) {
+      // If a letter is found
+      if (str[i - 1] !== "+" || str[i + 1] !== "+") {
+        // Check if it's not surrounded by '+'
+        return "false";
+      }
+    }
+  }
+
+  return "true";
+}
+
+// Example usage:
+console.log(SimpleSymbols("++d+===+c++==a")); // false
+console.log(SimpleSymbols("+a+b+c+")); // true
