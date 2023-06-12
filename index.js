@@ -1775,3 +1775,7 @@ function SimpleSymbols(str) {
 // Example usage:
 console.log(SimpleSymbols("++d+===+c++==a")); // false
 console.log(SimpleSymbols("+a+b+c+")); // true
+
+// Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+
+const totalAmount = (d) => d * 40 - (d > 6 ? 50 : d > 2 ? 20 : 0);
