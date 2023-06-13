@@ -1791,3 +1791,9 @@ function AlphabetSoup(str) {
 
   return sortedString;
 }
+
+// Create a method to see whether the string is ALL CAPS.
+
+String.prototype.toUpperCase = function () {
+  return !/[a-z]/.test(this);
+};
