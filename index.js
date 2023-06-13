@@ -1779,3 +1779,15 @@ console.log(SimpleSymbols("+a+b+c+")); // true
 // Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
 
 const totalAmount = (d) => d * 40 - (d > 6 ? 50 : d > 2 ? 20 : 0);
+
+// Have the function AlphabetSoup(str) take the str string parameter being passed and return the string with the letters in alphabetical order (ie. hello becomes ehllo). Assume numbers and punctuation symbols will not be included in the string.
+
+function AlphabetSoup(str) {
+  const charArray = str.split("");
+
+  const sortedArray = charArray.sort();
+
+  const sortedString = sortedArray.join("");
+
+  return sortedString;
+}
