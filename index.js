@@ -1821,3 +1821,11 @@ const languages = {
 function Greeting(language) {
   return languages[language] || "Welcome";
 }
+
+// function isPalindrome
+
+function isPalindrome(str) {
+  const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const reversedStr = cleanStr.split("").reverse().join("");
+  return reversedStr === cleanStr;
+}
