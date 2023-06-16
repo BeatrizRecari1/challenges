@@ -1829,3 +1829,39 @@ function isPalindrome(str) {
   const reversedStr = cleanStr.split("").reverse().join("");
   return reversedStr === cleanStr;
 }
+
+// Have the function NonrepeatingCharacter(str) take the str parameter being passed, which will contain only alphabetic characters and spaces, and return the first non-repeating character. For example: if str is "agettkgaeee" then your program should return k. The string will always contain at least one character and there will always be at least one non-repeating character.
+
+function NonrepeatingCharacter(str) {
+  // Remove spaces from the string
+  str = str.replace(/\s/g, "");
+
+  // Create a map to store character frequencies
+  const charMap = {};
+
+  // Iterate through each character in the string
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+
+    // If the character already exists in the map, increment its frequency
+    if (charMap[char]) {
+      charMap[char]++;
+    } else {
+      // Otherwise, initialize the character's frequency to 1
+      charMap[char] = 1;
+    }
+  }
+
+  // Find the first non-repeating character
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+
+    // If the character's frequency is 1, return it
+    if (charMap[char] === 1) {
+      return char;
+    }
+  }
+}
+
+// Example usage
+console.log(NonrepeatingCharacter("agettkgaeee")); // Output: k
