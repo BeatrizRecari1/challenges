@@ -1875,3 +1875,18 @@ function countBy(x, n) {
     return z;
   }
 }
+
+// Create a function reverseArr that takes a number and returns an array with the digits of the number in reverse order
+
+function reversedArr(number) {
+  // Convert the number to a string
+  var numStr = String(number);
+
+  // Convert the string to an array of characters, reverse it, and convert it back to a string
+  var reversedStr = numStr.split("").reverse().join("");
+
+  // Convert each character back to an integer and return the array
+  var reversedDigits = Array.from(reversedStr, Number);
+
+  return reversedDigits;
+}
