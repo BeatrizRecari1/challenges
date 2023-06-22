@@ -1900,3 +1900,9 @@ function evenOrOdd(number) {
     return "False";
   }
 }
+
+// Messi is a scorer in all three major soccer leagues. Create a function that returns the sum of all his goals in all three leagues.
+
+function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+}
