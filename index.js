@@ -1933,3 +1933,10 @@ var isAnagram = function (test, original) {
   var o = original.toLowerCase().split("").sort().join("");
   return t == o ? true : false;
 };
+
+// Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
+
+function shortCut(string) {
+  let result = string.replace(/[aeiou]g/, "");
+  return result;
+}
