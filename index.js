@@ -1940,3 +1940,15 @@ function shortCut(string) {
   let result = string.replace(/[aeiou]g/, "");
   return result;
 }
+
+// Write a function that returns both the minimum and maximum number of the given list/array.
+
+function minMax(arr) {
+  var max = arr[0],
+    min = arr[0];
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] > max) max = arr[i];
+    if (arr[i] < min) min = arr[i];
+  }
+  return [min, max];
+}
