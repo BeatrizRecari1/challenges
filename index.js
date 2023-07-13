@@ -2020,5 +2020,9 @@ function switchItUp(number) {
       9;
       return "Nine";
       break;
+    case 0:
+      0;
+      return "Zero";
+      break;
   }
 }
