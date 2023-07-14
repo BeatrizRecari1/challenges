@@ -2026,3 +2026,10 @@ function switchItUp(number) {
       break;
   }
 }
+
+// Create a function for the terminal game that takes the current position of the hero and the roll (1-6) and return the new position.
+
+function move(position, roll) {
+  // return the new position
+  return position + roll * 2;
+}
