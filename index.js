@@ -2138,3 +2138,27 @@ function SumMultiplier(arr) {
   }
   return false;
 }
+
+// Have the function CountingMinutesI(str) take the str parameter being passed which will be two times (each properly formatted with a colon and am or pm) separated by a hyphen and return the total number of minutes between the two times. The time will be in a 12 hour clock format. For example: if str is 9:00am-10:00am then the output should be 60. If str is 1:00pm-11:00am the output should be 1320.
+
+function CountingMinutesI(str) {
+  var split = str.split("-");
+
+  function toMinutes(time) {
+    var hour = parseInt(time.split(":")[0]);
+    var minutes = parseInt(time.slice(0, time.length - 2).split(":")[1]);
+    var totalMin = hour * 60 + minutes;
+
+    if (time[time.length - 2] === "p")
+      if (hour !== 12) return totalMin + 720;
+      else return totalMin;
+    else if (hour === 12) return totalMin + 720;
+    else return totalMin;
+  }
+
+  var time1 = toMinutes(split[0]);
+  var time2 = toMinutes(split[1]);
+
+  if (time1 > time2) return 1440 - time1 + time2;
+  else return time2 - time1;
+}
