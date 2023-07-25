@@ -2112,3 +2112,11 @@ function ExOh(str) {
   // code goes here
   return x == o;
 }
+
+// Have the function SnakeCase(str) take the str parameter being passed and return it in proper snake case format where each word is lowercased and separated from adjacent words via an underscore. The string will only contain letters and some combination of delimiter punctuation characters separating each word.
+
+function SnakeCase(str) {
+  str = str.toLowerCase();
+
+  return str.replace(/\W/g, "_");
+}
