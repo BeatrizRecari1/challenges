@@ -2178,7 +2178,7 @@ function LongestWord(sen) {
   return longest;
 }
 
-// program to find the factorial of a number using recursion
+// program to find the factorial of a number using recursion`
 function factorial(x) {
   // if number is 0
   if (x == 0) {
@@ -2189,4 +2189,13 @@ function factorial(x) {
   else {
     return x * factorial(x - 1);
   }
+}
+
+// Write a function called power which takes in a base and an exponent. If the exponent is 0, return 1.
+
+function power(base, exponent) {
+  if (exponent === 0) {
+    return 1;
+  }
+  return base * power(base, exponent - 1);
 }
