@@ -2207,3 +2207,9 @@ function factorial(num) {
 
   return num * factorial(num - 1);
 }
+
+// Now you have to write a function that takes an argument and returns the square of it.
+
+function numSquare(num) {
+  return num * num;
+}
