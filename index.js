@@ -2226,3 +2226,14 @@ function findCapitals(word) {
   }
   return newArray;
 }
+
+// Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+function doubleChar(str) {
+  let newString = "";
+
+  for (let i = 0; i < str.length; i++) {
+    newString = newString + str[i] + str[i];
+  }
+  return newString;
+}
