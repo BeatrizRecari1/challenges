@@ -2293,3 +2293,10 @@ function checkExam(array1, array2) {
 function removeChar(str) {
   return str.substring(1, str.length - 1);
 }
+
+
+// You need to write a function that reverses the words in a given string. A word can also fit an empty string
+
+function reverse(string) {
+  return string.split(' ').reverse().join(' ')
+}
