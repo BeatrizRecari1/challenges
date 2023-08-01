@@ -2294,9 +2294,19 @@ function removeChar(str) {
   return str.substring(1, str.length - 1);
 }
 
-
 // You need to write a function that reverses the words in a given string. A word can also fit an empty string
 
 function reverse(string) {
-  return string.split(' ').reverse().join(' ')
+  return string.split(" ").reverse().join(" ");
+}
+
+// You are given an odd-length array of integers, in which all of them are the same, except for one single number.
+// Complete the method which accepts such an array, and returns that single different number.
+function stray(numbers) {
+  let sortedArray = numbers.sort();
+
+  if (sortedArray[0] !== sortedArray[1]) {
+    return sortedArray[0];
+  }
+  return sortedArray[sortedArray.length - 1];
 }
