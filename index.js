@@ -2406,3 +2406,17 @@ function isTriangle(a, b, c) {
   }
   return false;
 }
+
+// Simple, given a string of words, return the length of the shortest word(s).
+
+function findShort(s) {
+  let newString = s.split(" ");
+  let shortestLength = Infinity;
+
+  for (const word of newString) {
+    if (word.length < shortestLength) {
+      shortestLength = word.length;
+    }
+  }
+  return shortestLength;
+}
