@@ -2426,3 +2426,10 @@ function findShort(s) {
 function mouthSize(animal) {
   return animal.toLowerCase() == "alligator" ? "small" : "wide";
 }
+
+// Write a function to calculate factorial for a given input
+
+function factorial(n) {
+  if (n < 0 || n > 12) throw new RangeError();
+  return n <= 1 ? 1 : n * factorial(n - 1);
+}
