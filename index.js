@@ -2386,3 +2386,17 @@ function century(year) {
 function twiceAsOld(a, b) {
   return Math.abs(a - 2 * b);
 }
+
+// Make a function that receive age, and return what they drink.
+
+function peopleWithAgeDrink(old) {
+  if (old >= 21) {
+    return "drink whisky";
+  } else if (old < 21) {
+    return "drink beer";
+  } else if (old < 18) {
+    return "drink coke";
+  } else {
+    return "drink toddy";
+  }
+}
