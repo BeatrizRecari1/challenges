@@ -2473,3 +2473,9 @@ function basicOp(operation, value1, value2) {
 function toSort(s) {
   return s.sort()[0].split("").join("***");
 }
+
+// Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+
+function replace(s) {
+  return s.replace(/[aeoiu]/gi, "!");
+}
