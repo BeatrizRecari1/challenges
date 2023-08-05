@@ -2505,3 +2505,26 @@ function digPow(n, p) {
   }
   return -1;
 }
+
+// You will be given an array of numbers. You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.
+
+function sortOddNumbers(arr) {
+  // Create an array containing only the odd numbers from the input array
+  const oddNumbers = arr.filter((num) => num % 2 !== 0);
+
+  // Sort the odd numbers in ascending order
+  oddNumbers.sort((a, b) => a - b);
+
+  // Replace the odd numbers in the original array with the sorted odd numbers
+  let oddIndex = 0;
+  const resultArray = arr.map((num) => {
+    if (num % 2 !== 0) {
+      const sortedOdd = oddNumbers[oddIndex];
+      oddIndex++;
+      return sortedOdd;
+    }
+    return num;
+  });
+
+  return resultArray;
+}
