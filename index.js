@@ -2630,3 +2630,9 @@ function oddOrEven(array) {
     return "odd";
   }
 }
+
+// We need a function that can transform a string into a number. What ways of achieving this do you know?
+
+function stringToNumber(str) {
+  return Number(str);
+}
