@@ -2636,3 +2636,22 @@ function oddOrEven(array) {
 function stringToNumber(str) {
   return Number(str);
 }
+
+// In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+
+function alphabetPosition(text) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const normalizedText = text.toLowerCase();
+  let result = "";
+
+  for (let i = 0; i < normalizedText.length; i++) {
+    const char = normalizedText[i];
+    const charIndex = alphabet.indexOf(char);
+
+    if (charIndex !== -1) {
+      result += charIndex + 1 + " ";
+    }
+  }
+
+  return result.trim();
+}
