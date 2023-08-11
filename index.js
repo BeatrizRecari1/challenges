@@ -2655,3 +2655,20 @@ function alphabetPosition(text) {
 
   return result.trim();
 }
+
+// Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+
+function reverseWords(str) {
+  // Go for it
+  const words = str.split(" ");
+
+  // Reverse each word in the array
+  const reversedWords = words.map((word) => {
+    return word.split("").reverse().join("");
+  });
+
+  // Join the reversed words array back into a string
+  const reversedString = reversedWords.join(" ");
+
+  return reversedString;
+}
