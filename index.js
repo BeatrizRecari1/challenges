@@ -2694,3 +2694,16 @@ const duplicateCount = (string) => {
   // return the number of elements in the array to represent the number characters that were duplicated
   return newArray.length;
 };
+
+// Alternative solution
+
+function duplicateCount(text) {
+  return (
+    text
+      .toLowerCase()
+      .split("")
+      .sort()
+      .join("")
+      .match(/([^])\1+/g) || []
+  ).length;
+}
