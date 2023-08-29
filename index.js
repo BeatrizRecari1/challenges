@@ -2722,3 +2722,22 @@ function towerBuilder(nFloors) {
   }
   return tower;
 }
+
+// You will be given a number and you will need to return it as a string in Expanded Form
+
+function expandedForm(num) {
+  const numStr = num.toString(); // Convert the number to a string.
+  let result = ""; // Initialize an empty string to store the expanded form.
+
+  for (let i = 0; i < numStr.length; i++) {
+    if (numStr[i] !== "0") {
+      // Check if the current digit is not zero.
+      if (result !== "") {
+        result += " + "; // Add a "+" separator if there are already digits in the result.
+      }
+      result += numStr[i] + "0".repeat(numStr.length - i - 1); // Add the current digit followed by appropriate number of zeros.
+    }
+  }
+
+  return result; // Return the expanded form as a string.
+}
