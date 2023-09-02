@@ -2798,3 +2798,30 @@ function points(games) {
 function solution(str) {
   return str.split("").reverse().join("");
 }
+
+// Exercise from Codewars: 10 minute walk where you must come back to the origin
+
+function returnToOrigin(walk) {
+  let dx = 0;
+  let dy = 0;
+  let dt = walk.length;
+
+  for (let i = 0; i < walk.length; i++) {
+    switch (walk[i]) {
+      case "n":
+        dx--;
+        break;
+      case "s":
+        dx++;
+        break;
+      case "e":
+        dy--;
+        break;
+      case "w":
+        dy++;
+        break;
+    }
+  }
+
+  return dt === 0 && dx === 0 && dy === 0;
+}
