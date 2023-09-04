@@ -2835,3 +2835,14 @@ function twoSmallestNumbers(numbers) {
 
   return numbers[0] + numbers[1];
 }
+
+// There is a queue for the self-checkout tills at the supermarket. Your task is write a function to calculate the total time required for all the customers to check out!
+
+function queueTime(customers, n) {
+  var w = new Array(n).fill(0);
+  for (let t of customers) {
+    let idx = w.indexOf(Math.min(...w));
+    w[idx] += t;
+  }
+  return Math.max(...w);
+}
