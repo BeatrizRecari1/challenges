@@ -2846,3 +2846,15 @@ function queueTime(customers, n) {
   }
   return Math.max(...w);
 }
+
+// Complete the solution so that the function will break up camel casing, using a space between words.
+
+function solution(string) {
+  string = string.split("");
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === string[i].toUpperCase()) {
+      string[i] = " " + string[i];
+    }
+  }
+  return string.join("");
+}
