@@ -2858,3 +2858,12 @@ function solution(string) {
   }
   return string.join("");
 }
+
+// Solution to the bouncing ball with a window of 1.5 challenge from codewars
+
+function bouncingBall(h, bounce, window) {
+  var rebounds = -1;
+  if (bounce > 0 && bounce < 1)
+    while (h > window) (rebounds += 2), (h *= bounce);
+  return rebounds;
+}
