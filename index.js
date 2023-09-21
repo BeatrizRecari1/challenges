@@ -2867,3 +2867,16 @@ function bouncingBall(h, bounce, window) {
     while (h > window) (rebounds += 2), (h *= bounce);
   return rebounds;
 }
+
+// You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
+// If it is a square, return its area. If it is a rectangle, return its perimeter.
+
+const areaOrPerimeter = function (l, w) {
+  // Return your answer
+
+  if (l === w) {
+    return l ** 2;
+  } else if (l !== w) {
+    return l + l + (w + w);
+  }
+};
