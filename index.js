@@ -2894,3 +2894,7 @@ const quarterOf = (month) => {
     return 4;
   }
 };
+
+// Alternative solution to the previous challenge
+
+const quarterOfYear = (month) => Math.ceil(month / 3);
