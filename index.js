@@ -2898,3 +2898,10 @@ const quarterOf = (month) => {
 // Alternative solution to the previous challenge
 
 const quarterOfYear = (month) => Math.ceil(month / 3);
+
+
+// Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+function reverseNumber(n) {
+  return Number(n.toString().split('').sort().reverse().join(''))
+}
