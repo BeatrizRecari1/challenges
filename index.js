@@ -2923,3 +2923,10 @@ function highAndLow(numbers) {
   });
   return arr[arr.length - 1] + " " + arr[0];
 }
+
+// Alternative solution to the previous challenge
+
+function highAndLow(numbers) {
+  numbers = numbers.split(" ");
+  return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+}
