@@ -2972,3 +2972,16 @@ function addFive(num) {
   var total = num + 5;
   return total;
 }
+
+// Create a function that accepts a string and a single character, and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+
+function strCount(str, letter) {
+  //code here
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === letter) {
+      count++;
+    }
+  }
+  return count;
+}
