@@ -3007,3 +3007,10 @@ function longest(s1, s2) {
 
   return sorted;
 }
+
+// Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+
+function removeUrlAnchor(url) {
+  const parts = url.split("#");
+  return parts[0];
+}
