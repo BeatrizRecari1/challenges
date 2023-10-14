@@ -3090,3 +3090,12 @@ function problem(x) {
   }
   return x * 50 + 6;
 }
+
+// Create a function that produces this sequence: accum("abcd") -> "A-Bb-Ccc-Dddd"
+
+function accum(s) {
+  return s
+    .split("")
+    .map((c, i) => c.toUpperCase() + c.toLowerCase().repeat(i))
+    .join("-");
+}
