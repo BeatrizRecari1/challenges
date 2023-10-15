@@ -3099,3 +3099,9 @@ function accum(s) {
     .map((c, i) => c.toUpperCase() + c.toLowerCase().repeat(i))
     .join("-");
 }
+
+// In this kata you will create a function that takes in a list and returns a list with the reverse order.
+
+function reverseList(list) {
+  return list.reverse();
+}
