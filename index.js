@@ -3105,3 +3105,12 @@ function accum(s) {
 function reverseList(list) {
   return list.reverse();
 }
+
+// Write a function that returns true only if one of the two arguments are true.
+function xor(a, b) {
+  if ((a === true && b === false) || (a === false && b === true)) {
+    return true;
+  } else {
+    return false;
+  }
+}
