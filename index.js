@@ -3175,3 +3175,10 @@ function sumDigPow(a, b) {
   }
   return arr;
 }
+
+// Write my first function
+
+function helloWorld() {
+  let str = "Hello World!";
+  console.log(str);
+}
