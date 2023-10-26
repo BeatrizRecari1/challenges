@@ -3188,3 +3188,24 @@ function helloWorld() {
 function saleHotdogs(n) {
   return n * (n < 5 ? 100 : n < 10 ? 95 : 90);
 }
+
+// Another challenge from codewars
+
+function titleCase(title, minorWords) {
+  var minorWords =
+    typeof minorWords !== "undefined"
+      ? minorWords.toLowerCase().split(" ")
+      : [];
+  return title
+    .toLowerCase()
+    .split(" ")
+    .map(function (v, i) {
+      if (v != "" && (minorWords.indexOf(v) === -1 || i == 0)) {
+        v = v.split("");
+        v[0] = v[0].toUpperCase();
+        v = v.join("");
+      }
+      return v;
+    })
+    .join(" ");
+}
