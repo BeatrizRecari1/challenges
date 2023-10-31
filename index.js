@@ -3235,3 +3235,17 @@ function stockList(listOfArt, listOfCat) {
     })
     .join(" - ");
 }
+
+// Your task is to construct a building which will be a pile of n cubes. The cube at the bottom will have a volume of
+
+function findNb(m) {
+  let n = 1;
+  let sum = 0;
+
+  while (sum < m) {
+    sum += Math.pow(n, 3);
+    n++;
+  }
+
+  return sum === m ? n - 1 : -1;
+}
