@@ -3276,3 +3276,18 @@ function mxdiflg(a1, a2) {
     Math.max(...l2) - Math.min(...l1)
   );
 }
+
+// Your task, is to create N×N multiplication table, of size provided in parameter.
+
+multiplicationTable = function (size) {
+  var result = [];
+
+  for (var i = 0; i < size; i++) {
+    result[i] = [];
+    for (var j = 0; j < size; j++) {
+      result[i][j] = (i + 1) * (j + 1);
+    }
+  }
+
+  return result;
+};
