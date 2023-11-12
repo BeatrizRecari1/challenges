@@ -3291,3 +3291,12 @@ multiplicationTable = function (size) {
 
   return result;
 };
+
+// Write a function called checkCoupon which verifies that a coupon code is valid and not expired.
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+  return (
+    enteredCode === correctCode &&
+    Date.parse(expirationDate) >= Date.parse(currentDate)
+  );
+}
