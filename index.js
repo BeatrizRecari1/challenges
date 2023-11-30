@@ -3395,3 +3395,13 @@ function comp(array1, array2) {
   array2.sort((a, b) => a - b);
   return array1.map((v) => v * v).every((v, i) => v == array2[i]);
 }
+
+// Daily code challenge
+
+function tribonacci(signature, n) {
+  for (var i = 0; i < n - 3; i++) {
+    // iterate n times
+    signature.push(signature[i] + signature[i + 1] + signature[i + 2]); // add last 3 array items and push to trib
+  }
+  return signature.slice(0, n); //return trib - length of n
+}
