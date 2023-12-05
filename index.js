@@ -3411,3 +3411,12 @@ function tribonacci(signature, n) {
 function convert(minutes) {
   return minutes * 60;
 }
+
+// Daily code challenge create a function that returns true if the string is empty and false if not
+
+function isEmpty(s) {
+  if (s === "" || s === "") {
+    return true;
+  }
+  return false;
+}
