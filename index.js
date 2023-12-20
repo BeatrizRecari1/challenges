@@ -3429,3 +3429,9 @@ function comp(str1, str2) {
   }
   return false;
 }
+
+// Daily code challenge from edabit
+
+function concatName(firstName, lastName) {
+  return lastName + ", " + firstName;
+}
