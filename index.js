@@ -3435,3 +3435,21 @@ function comp(str1, str2) {
 function concatName(firstName, lastName) {
   return lastName + ", " + firstName;
 }
+
+
+// Working on a Google clone with html for now
+
+<!-- IGNORE THIS LINE 👇 -->
+<link rel="stylesheet" href="styles.css">
+
+<img src="google.png">
+<input type="text">
+<button>Google Search</button>
+<button>I'm Feeling Lucky</button>
+
+<!--
+Challenge:
+Add the anchor tag that points to blog.html.
+The link should be wrapped in a <p> tag.
+-->
+<p>We protect your privacy. <a href="blog.html">Learn how.</a></p>
