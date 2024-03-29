@@ -3447,9 +3447,5 @@ function concatName(firstName, lastName) {
 <button>Google Search</button>
 <button>I'm Feeling Lucky</button>
 
-<!--
-Challenge:
-Add the anchor tag that points to blog.html.
-The link should be wrapped in a <p> tag.
--->
+
 <p>We protect your privacy. <a href="blog.html">Learn how.</a></p>
