@@ -3437,15 +3437,17 @@ function concatName(firstName, lastName) {
 }
 
 
-// Working on a Google clone with html for now
+// Working on designing a Twitter button with CSS
 
-<!-- IGNORE THIS LINE 👇 -->
-<link rel="stylesheet" href="styles.css">
+button {
 
-<img src="google.png">
-<input type="text">
-<button>Google Search</button>
-<button>I'm Feeling Lucky</button>
-
-
-<p>We protect your privacy. <a href="blog.html">Learn how.</a></p>
+  color: #0f1419;
+  border: 1px solid #cfd9de;
+  border-radius: 20px;
+  background: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: bold;
+}
